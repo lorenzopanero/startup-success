@@ -12,3 +12,9 @@ def download_from_drive(csv_name):
     with open("file.csv", "wb") as f:
         f.write(response.content)
     return pd.read_csv("file.csv")
+
+# Funzione import json palette
+def import_palette_json(file_path):
+    with open(file_path, 'r') as file:
+        palette = json.load(file)
+    return palette
